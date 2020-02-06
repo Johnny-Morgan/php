@@ -20,7 +20,28 @@
                 $msgClass = 'alert-danger';
             } else {
                 // Passed
-                echo 'PASSED';
+                $toEmail = 'jwjmorgan@gmail.com';
+                $subject = 'Contact Request From '.$name;
+                $body = '<h2>Contact Request</h2>
+                        <h4>Name</h4><p>'.$name.'</p>
+                        <h4>Email</h4><p>'.$email.'</p>
+                        <h4>Mesage</h4><p>'.$message.'</p>';
+                
+                // Email headers
+                $headers = "MIME-Version: 1.0" ."\r\n";
+                $headers .="Content-Type:text/html;charset=UTF-8" ."\r\n";
+
+                // Additional headers
+                $headers .= "From " .$name. "<".$email.">". "\r\n";
+
+                if(mail($toEmail, $subject, $body, $headers)){
+                    // Email sent
+                    $msg = 'Your email has been sent';
+                    $msgClass = 'alert-success';
+                } else {
+                    $msg = 'Your email was NOT sent';
+                    $msgClass = 'alert-danger';
+                }
             }
         } else {
             // Failed

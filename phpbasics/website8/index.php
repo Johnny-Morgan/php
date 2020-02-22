@@ -33,6 +33,7 @@
                 <small>Created on <?php echo $post['created_at']; ?> 
                 by <?php echo $post['author'];?></small>
                 <p><?php echo $post['body']; ?></p>
+                <a class="btn btn-primary" href="post.php?id=<?php echo $post['id']; ?>">Read More</a>
             </div>
         <?php endforeach; ?>
     </div>

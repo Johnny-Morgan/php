@@ -1,4 +1,5 @@
 <?php
+    require('config/config.php');
     require('config/db.php');
 
     // Get ID
@@ -29,7 +30,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="/" class="btn btn-light">Back</a>
+        <a href="<?php echo ROOT_URL?>" class="btn btn-light">Back</a>
         <h1><?php echo $post['title']; ?></h1>
         <small>Created on <?php echo $post['created_at']; ?> 
         by <?php echo $post['author'];?></small>

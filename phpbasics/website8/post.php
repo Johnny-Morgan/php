@@ -22,13 +22,7 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>PHP Blog</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.css">
-</head>
-<body>
+<?php include('inc/header.php'); ?>
     <div class="container">
         <a href="<?php echo ROOT_URL?>" class="btn btn-light">Back</a>
         <h1><?php echo $post['title']; ?></h1>
@@ -36,5 +30,4 @@
         by <?php echo $post['author'];?></small>
         <p><?php echo $post['body']; ?></p>
     </div>
-</body>
-</html>
+<?php include('inc/footer.php'); ?>

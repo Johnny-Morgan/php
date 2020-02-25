@@ -19,13 +19,7 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>PHP Blog</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.css">
-</head>
-<body>
+<?php include('inc/header.php'); ?>
     <div class="container">
         <h1>Posts</h1>
         <?php foreach($posts as $post) : ?>
@@ -39,8 +33,7 @@
             </div>
         <?php endforeach; ?>
     </div>
-</body>
-</html>
+<?php include('inc/footer.php'); ?>
 
 
 
